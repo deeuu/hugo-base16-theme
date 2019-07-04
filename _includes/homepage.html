@@ -1,0 +1,29 @@
+<main role="main" class="homepage">
+
+  {% include hero.html %}
+
+  <h1 class="headline">Recent Posts</h1>
+
+  <div class="article-list">
+    {% for post in site.posts %} 
+
+      {% include article-list-item.html %}
+
+    {% endfor %}
+
+  </div>
+  
+  {% if site.tags.size > 0 %}
+  <h1 class="headline">Tags</h1>
+
+  <section class="tags">
+    {% for tag in site.tags %}
+    <span class="tag">
+      <a href="{{ site.url }}/tags/#{{ tag[0] }}">{{ tag[0] }}</a>
+      <small>({{ tag[1].size }})</small>
+    </span>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+</main>

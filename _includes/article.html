@@ -1,0 +1,38 @@
+<article class="single" itemscope itemtype="http://schema.org/BlogPosting">
+
+  {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+  <div class="meta">
+    <span class="key">published on</span>
+    <span class="val">
+        <time itemprop="datePublished">
+        {{ page.date | date: date_format }}
+        </time>
+    </span>
+
+    {% if page.categories.size > 0 %}
+    <br>
+    <span class="key">categories:</span>
+    {% for cat in page.categories %}
+    <span class="val">
+        <a href="{{ cat | relative_url }}">{{ cat }}</a>
+    </span>
+    {% endfor %}
+    {% endif %}
+
+    {% if page.tags.size > 0 %}
+    <br>
+    <span class="key">tags:</span>
+    {% for tag in page.tags %}
+    <span class="val">
+        <a href="{{ tag | relative_url }}">{{ tag }}</a>
+    </span>
+    {% endfor %}
+    {% endif %}
+ 
+  </div>
+
+  <h1 class="headline" itemprop="headline">{{ page.title }}</h1>
+  <section class="body" itemprop="articleBody">
+    {{ content }}
+  </section>
+</article>

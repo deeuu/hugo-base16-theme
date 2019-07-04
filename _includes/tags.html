@@ -1,0 +1,41 @@
+<main role="main" class="homepage">
+
+<h1 class="headline">Posts by #tag </h1>
+{% if site.tags.size > 0 %}
+
+{% for tag in site.tags %}
+
+    <div class="article-list">
+
+    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
+
+        <h2 id="{{ tag | first }}"
+            class="headline"
+            itemprop="headline"> 
+            #{{ tag | first }}
+        </h2>
+
+    {% for post in tag.last %}
+
+        {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+        <div class="meta">
+        <a href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+        </a>
+        <span class="val">
+            <time itemprop="datePublished">
+            ( {{ post.date | date: date_format }} )
+            </time>
+          </span>
+        </div>
+
+    {% endfor %}
+
+    </article>
+
+    </div>
+{% endfor %}
+
+{% endif %}
+
+</main>
