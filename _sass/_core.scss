@@ -32,7 +32,10 @@ body {
   margin-right: auto;
 }
 
-div.right {
+.left {
+  float: left;
+}
+.right {
   float:right;
 }
 
@@ -43,6 +46,28 @@ div.clearfix {
 @include respond-to('small') {
   .container {
     width: 100%;
+  }
+}
+
+.page-nav {
+    float:right;
+}
+
+.page-nav a {
+    margin-right: 2em;
+}
+
+@include respond-to('small') {
+  .container {
+    width: 100%;
+  }
+  .page-nav {
+      float:left;
+      width: 100%;
+      margin-top: 2em;
+  }
+  .page-nav a {
+    margin-right: 1em;
   }
 }
 
@@ -73,6 +98,20 @@ header, footer {
 header {
   margin-top: 1rem;
   margin-bottom: 2rem;
+}
+
+header a:link {
+  text-decoration: none;
+  color: $base0d;
+}
+
+header a:visited, a:active {
+  text-decoration: none;
+  color: $base0d;
+}
+
+header a:hover {
+  color: $base0e;
 }
 
 @include respond-to('small') {
@@ -129,6 +168,7 @@ pre, code {
 header a.path {
   color: $base0d;
 }
+
 
 header span.caret {
   color: $base07;
