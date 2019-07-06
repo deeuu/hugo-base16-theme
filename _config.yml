@@ -17,8 +17,8 @@ title: Jekyll Base16 Theme
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
     Base16 is a simple and colorful theme with the base16 eighties colorscheme
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://deeuu.github.io/jekyll-base16-theme" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/jekyll-base16-theme" # the subpath of your site, e.g. /blog
+url: "https://deeuu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
