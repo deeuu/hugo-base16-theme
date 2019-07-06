@@ -1,20 +1,3 @@
-.base00 { color: $base00; }
-.base01 { color: $base01; }
-.base02 { color: $base02; }
-.base03 { color: $base03; }
-.base04 { color: $base04; }
-.base05 { color: $base05; }
-.base06 { color: $base06; }
-.base07 { color: $base07; }
-.base08 { color: $base08; }
-.base09 { color: $base09; }
-.base0a { color: $base0a; }
-.base0b { color: $base0b; }
-.base0c { color: $base0c; }
-.base0d { color: $base0d; }
-.base0e { color: $base0e; }
-.base0f { color: $base0f; }
-
 /* General Page Layout */
 
 body {
@@ -102,16 +85,16 @@ header {
 
 header a:link {
   text-decoration: none;
-  color: $base0d;
+  color: $base0D;
 }
 
 header a:visited, a:active {
   text-decoration: none;
-  color: $base0d;
+  color: $base0D;
 }
 
 header a:hover {
-  color: $base0e;
+  color: $base0E;
 }
 
 @include respond-to('small') {
@@ -142,7 +125,7 @@ footer {
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.25;
-  margin-top: 1em;
+  margin-top: .5em;
   margin-bottom: .5em;
 }
 
@@ -166,7 +149,7 @@ pre, code {
 /* Header Layout */
 
 header a.path {
-  color: $base0d;
+  color: $base0D;
 }
 
 
@@ -213,21 +196,9 @@ footer a {
   }
 }
 
-.homepage h1.site-title {
-  text-align: center;
-  font-size: 5em;
-  color: $base0c;
-}
-
-@include respond-to('small') {
-  .homepage h1.site-title {
-    font-size: 3em;
-  }
-}
-
 .homepage h1.headline {
   font-size: 3em;
-  color: $base0a;
+  color: $base0A;
 }
 
 @include respond-to('small') {
@@ -235,10 +206,6 @@ footer a {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-}
-
-.homepage .hero-logo img {
-  width: 100%;
 }
 
 .homepage section.categories,
@@ -251,7 +218,7 @@ footer a {
 .homepage .category a,
 .homepage .tag,
 .homepage .tag a {
-  color: $base0e;
+  color: $base0E;
 }
 
 .homepage .tag {
@@ -262,7 +229,7 @@ footer a {
 
 .article-list h1.list-title {
   font-size: 3em;
-  color: $base0a;
+  color: $base0A;
 }
 
 .article-list article {
@@ -274,7 +241,7 @@ footer a {
 .article-list article h2.headline,
 .article-list article h2.headline a {
   margin-top: 0;
-  color: $base0d;
+  color: $base0D;
 }
 
 .article-list article .meta {
@@ -287,10 +254,10 @@ footer a {
 
 .article-list article .meta .val,
 .article-list article .meta .val a {
-  color: $base0e;
+  color: $base0E;
 }
 
-.article-list article section.summary a { color: $base0f; }
+.article-list article section.summary a { color: $base0F; }
 
 
 /* Single Post Layout */
@@ -305,7 +272,7 @@ article.single .meta .key {
 }
 
 article.single .meta .val, article.single .meta .val a {
-  color: $base0e;
+  color: $base0E;
 }
 
 @include respond-to('small') {
@@ -318,7 +285,7 @@ article.single .meta .val, article.single .meta .val a {
 article.single h1.headline {
   margin-top: 0;
   font-size: 3em;
-  color: $base0a;
+  color: $base0A;
 }
 
 @include respond-to('small') {
@@ -342,14 +309,14 @@ article.single section.body {
 
 /* Highlight Colors */
 
-article.single section.body h1 { color: $base0d; }
-article.single section.body h2 { color: $base0b; }
+article.single section.body h1 { color: $base0D; }
+article.single section.body h2 { color: $base0B; }
 article.single section.body h3 { color: $base09; }
 article.single section.body h4 { color: $base08; }
 article.single section.body h5 { color: $base02; }
 article.single section.body h6 { color: $base03; }
 
-article.single section.body a { color: $base0f; }
+article.single section.body a { color: $base0F; }
 
 /* Article Elements */
 
@@ -442,7 +409,7 @@ article.single blockquote {
   margin-left: 2rem;
   margin-right: 3rem;
   padding-left: 1rem;
-  border-left: 5px solid $base0c;
+  border-left: 5px solid $base0C;
 }
 
 article.single hr {
@@ -459,10 +426,10 @@ pre { background: $base00; color: $base07 }
 .highlight .hll { background-color: $base02 }
 .highlight .c { color: $base03 } /* Comment */
 .highlight .err { color: $base08 } /* Error */
-.highlight .k { color: $base0e } /* Keyword */
+.highlight .k { color: $base0E } /* Keyword */
 .highlight .l { color: $base09 } /* Literal */
 .highlight .n { color: $base07 } /* Name */
-.highlight .o { color: $base0c } /* Operator */
+.highlight .o { color: $base0C } /* Operator */
 .highlight .p { color: $base07 } /* Punctuation */
 .highlight .cm { color: $base03 } /* Comment.Multiline */
 .highlight .cp { color: $base03 } /* Comment.Preproc */
@@ -471,50 +438,50 @@ pre { background: $base00; color: $base07 }
 .highlight .gd { color: $base08 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
 .highlight .gh { color: $base07; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: $base0b } /* Generic.Inserted */
+.highlight .gi { color: $base0B } /* Generic.Inserted */
 .highlight .gp { color: $base03; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: $base0c; font-weight: bold } /* Generic.Subheading */
-.highlight .kc { color: $base0e } /* Keyword.Constant */
-.highlight .kd { color: $base0e } /* Keyword.Declaration */
-.highlight .kn { color: $base0c } /* Keyword.Namespace */
-.highlight .kp { color: $base0e } /* Keyword.Pseudo */
-.highlight .kr { color: $base0e } /* Keyword.Reserved */
-.highlight .kt { color: $base0a } /* Keyword.Type */
-.highlight .ld { color: $base0b } /* Literal.Date */
+.highlight .gu { color: $base0C; font-weight: bold } /* Generic.Subheading */
+.highlight .kc { color: $base0E } /* Keyword.Constant */
+.highlight .kd { color: $base0E } /* Keyword.Declaration */
+.highlight .kn { color: $base0C } /* Keyword.Namespace */
+.highlight .kp { color: $base0E } /* Keyword.Pseudo */
+.highlight .kr { color: $base0E } /* Keyword.Reserved */
+.highlight .kt { color: $base0A } /* Keyword.Type */
+.highlight .ld { color: $base0B } /* Literal.Date */
 .highlight .m { color: $base09 } /* Literal.Number */
-.highlight .s { color: $base0b } /* Literal.String */
-.highlight .na { color: $base0d } /* Name.Attribute */
+.highlight .s { color: $base0B } /* Literal.String */
+.highlight .na { color: $base0D } /* Name.Attribute */
 .highlight .nb { color: $base07 } /* Name.Builtin */
-.highlight .nc { color: $base0a } /* Name.Class */
+.highlight .nc { color: $base0A } /* Name.Class */
 .highlight .no { color: $base08 } /* Name.Constant */
-.highlight .nd { color: $base0c } /* Name.Decorator */
+.highlight .nd { color: $base0C } /* Name.Decorator */
 .highlight .ni { color: $base07 } /* Name.Entity */
 .highlight .ne { color: $base08 } /* Name.Exception */
-.highlight .nf { color: $base0d } /* Name.Function */
+.highlight .nf { color: $base0D } /* Name.Function */
 .highlight .nl { color: $base07 } /* Name.Label */
-.highlight .nn { color: $base0a } /* Name.Namespace */
-.highlight .nx { color: $base0d } /* Name.Other */
+.highlight .nn { color: $base0A } /* Name.Namespace */
+.highlight .nx { color: $base0D } /* Name.Other */
 .highlight .py { color: $base07 } /* Name.Property */
-.highlight .nt { color: $base0c } /* Name.Tag */
+.highlight .nt { color: $base0C } /* Name.Tag */
 .highlight .nv { color: $base08 } /* Name.Variable */
-.highlight .ow { color: $base0c } /* Operator.Word */
+.highlight .ow { color: $base0C } /* Operator.Word */
 .highlight .w { color: $base07 } /* Text.Whitespace */
 .highlight .mf { color: $base09 } /* Literal.Number.Float */
 .highlight .mh { color: $base09 } /* Literal.Number.Hex */
 .highlight .mi { color: $base09 } /* Literal.Number.Integer */
 .highlight .mo { color: $base09 } /* Literal.Number.Oct */
-.highlight .sb { color: $base0b } /* Literal.String.Backtick */
+.highlight .sb { color: $base0B } /* Literal.String.Backtick */
 .highlight .sc { color: $base07 } /* Literal.String.Char */
 .highlight .sd { color: $base03 } /* Literal.String.Doc */
-.highlight .s2 { color: $base0b } /* Literal.String.Double */
+.highlight .s2 { color: $base0B } /* Literal.String.Double */
 .highlight .se { color: $base09 } /* Literal.String.Escape */
-.highlight .sh { color: $base0b } /* Literal.String.Heredoc */
+.highlight .sh { color: $base0B } /* Literal.String.Heredoc */
 .highlight .si { color: $base09 } /* Literal.String.Interpol */
-.highlight .sx { color: $base0b } /* Literal.String.Other */
-.highlight .sr { color: $base0b } /* Literal.String.Regex */
-.highlight .s1 { color: $base0b } /* Literal.String.Single */
-.highlight .ss { color: $base0b } /* Literal.String.Symbol */
+.highlight .sx { color: $base0B } /* Literal.String.Other */
+.highlight .sr { color: $base0B } /* Literal.String.Regex */
+.highlight .s1 { color: $base0B } /* Literal.String.Single */
+.highlight .ss { color: $base0B } /* Literal.String.Symbol */
 .highlight .bp { color: $base07 } /* Name.Builtin.Pseudo */
 .highlight .vc { color: $base08 } /* Name.Variable.Class */
 .highlight .vg { color: $base08 } /* Name.Variable.Global */

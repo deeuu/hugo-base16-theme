@@ -1,0 +1,55 @@
+.base00 { color: $base00; }
+.base01 { color: $base01; }
+.base02 { color: $base02; }
+.base03 { color: $base03; }
+.base04 { color: $base04; }
+.base05 { color: $base05; }
+.base06 { color: $base06; }
+.base07 { color: $base07; }
+.base08 { color: $base08; }
+.base09 { color: $base09; }
+.base0A { color: $base0A; }
+.base0B { color: $base0B; }
+.base0C { color: $base0C; }
+.base0D { color: $base0D; }
+.base0E { color: $base0E; }
+.base0F { color: $base0F; }
+
+#grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(16, 1fr);
+  height: 1em;
+}
+
+#box-base00 { background-color: $base00; }
+#box-base01 { background-color: $base01; }
+#box-base02 { background-color: $base02; }
+#box-base03 { background-color: $base03; }
+#box-base04 { background-color: $base04; }
+#box-base05 { background-color: $base05; }
+#box-base06 { background-color: $base06; }
+#box-base07 { background-color: $base07; }
+#box-base08 { background-color: $base08; }
+#box-base09 { background-color: $base09; }
+#box-base0A { background-color: $base0A; }
+#box-base0B { background-color: $base0B; }
+#box-base0C { background-color: $base0C; }
+#box-base0D { background-color: $base0D; }
+#box-base0E { background-color: $base0E; }
+#box-base0F { background-color: $base0F; }
+
+h1.site-title {
+  text-align: center;
+  font-size: 5em;
+  color: $base0C;
+}
+
+@include respond-to('small') {
+  h1.site-title {
+    font-size: 3em;
+  }
+  #grid {
+    height: 0.5em;
+  }
+}
