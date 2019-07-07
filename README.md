@@ -9,7 +9,18 @@ Primary modifications:
 - Categories removed (only tags)
 - Support for base16 colour schemes provided by the [Base16-styles repository](https://github.com/samme/base16-styles).
 
-# Customisation
+## Local development
+
+First, ensure you have [Jekyll installed](https://jekyllrb.com/docs/installation/).
+
+```shell
+mkdir mysite
+git clone --recursive https://github.com/deeuu/jekyll-base16-theme ./mysite
+cd mysite
+bundle exec jekyll serve
+```
+
+## Customisation
 
 - To change the hero image on the homepage, edit `_includes/hero.html` (see
 `_sass/_hero.scss` for styling).
