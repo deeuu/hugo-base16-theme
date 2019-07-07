@@ -19,7 +19,7 @@
   <section class="tags">
     {% for tag in site.tags %}
     <span class="tag">
-      <a href="{{ site.url }}/tags/#{{ tag[0] }}">{{ tag[0] }}</a>
+      <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}">{{ tag[0] }}</a>
       <small>({{ tag[1].size }})</small>
     </span>
     {% endfor %}

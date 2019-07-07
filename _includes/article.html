@@ -24,7 +24,7 @@
     <span class="key">tags:</span>
     {% for tag in page.tags %}
     <span class="val">
-        <a href="{{ tag | relative_url }}">{{ tag }}</a>
+        <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>
     </span>
     {% endfor %}
     {% endif %}
