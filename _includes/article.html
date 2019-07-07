@@ -9,16 +9,6 @@
         </time>
     </span>
 
-    {% if page.categories.size > 0 %}
-    <br>
-    <span class="key">categories:</span>
-    {% for cat in page.categories %}
-    <span class="val">
-        <a href="{{ cat | relative_url }}">{{ cat }}</a>
-    </span>
-    {% endfor %}
-    {% endif %}
-
     {% if page.tags.size > 0 %}
     <br>
     <span class="key">tags:</span>
