@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}" type="text/css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" type="text/css">
+
 <title>{{ site.title | escape }}</title>
 </head>
 <body>
@@ -12,18 +14,95 @@
 <header>
   <div class="container clearfix">
 
+    <! Based on
+    https://github.com/mmistakes/minimal-mistakes/blob/102924ff940d5b7f03493bb70aedcbad2d99286f/_includes/author-profile.html
+    >
+    {% if site.author %}
+    <div class="author-social-platforms">
+
+      {% for socialPlatform in site.author %}
+
+      {% if socialPlatform.email %}
+          <a href="mailto:{{ socialPlatform.email }}">
+          <meta itemprop="email" content="{{ socialPlatform.email }}" />
+          <i class="fas fa-fw fa-envelope-square icon" aria-hidden="true"></i>
+          {{ socialPlatform.anchor }}
+          </a>
+      {% endif %}
+
+      {% if socialPlatform.github %}
+        <a href="https://github.com/{{ socialPlatform.github }}">
+            <i class="fab fa-fw fa-github icon" aria-hidden="true"></i>
+            {{ socialPlatform.anchor }}
+        </a>
+      {% endif %}
+
+      {% if socialPlatform.gitlab %}
+        <a href="https://gitlab.com/{{ socialPlatform.gitlab }}">
+            <i class="fab fa-fw fa-gitlab icon" aria-hidden="true"></i>
+            {{ socialPlatform.anchor }}
+        </a>
+      {% endif %}
+
+      {% if socialPlatform.bitbucket %}
+        <a href="https://bitbucket.org/{{ socialPlatform.bitbucket }}">
+            <i class="fab fa-fw fa-bitbucket icon" aria-hidden="true"></i>
+            {{ socialPlatform.anchor }}
+        </a>
+      {% endif %}
+
+      {% if socialPlatform.stackoverflow %}
+        <a href="https://stackoverflow.coms/{{ socialPlatform.stackoverflow.user }}">
+            <i class="fab fa-fw fa-stack-overflow icon" aria-hidden="true"></i>
+            {{ socialPlatform.anchor }}
+        </a>
+      {% endif %}
+
+      {% if socialPlatform.linkedin %}
+        <a href="https://linkedin.com/in/{{ socialPlatform.linkedin }}">
+            <i class="fab fa-fw fa-linkedin icon" aria-hidden="true"></i>
+            {{ socialPlatform.anchor }}
+        </a>
+      {% endif %}
+
+      {% if socialPlatform.youtube %}
+        <a href="https://www.youtube.com/{{ socialPlatform.youtube.user }}">
+            <i class="fab fa-fw fa-youtube icon" aria-hidden="true"></i>
+            {{ socialPlatform.anchor }}
+        </a>
+      {% endif %}
+
+      {% if socialPlatform.twitter %}
+        <a href="https://twitter.com/{{ socialPlatform.twitter }}">
+            <i class="fab fa-fw fa-twitter icon" aria-hidden="true"></i>
+            {{ socialPlatform.anchor }}
+        </a>
+      {% endif %}
+
+      {% if socialPlatform.facebook %}
+        <a href="https://www.facebook.com/{{ socialPlatform.facebook }}">
+            <i class="fab fa-fw fa-facebook-square icon" aria-hidden="true"></i>
+            {{ socialPlatform.anchor }}
+        </a>
+      {% endif %}
+
+      {% endfor %}
+
+    </div>
+    {% endif %}
+
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
 
-    <a class="left" href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
 
-    <div class="page-nav">
-    {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title -%}
+    <div class='nav'>
+        <a href="{{ site.baseurl }}/">{{ site.title }} </a>
+        {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
             <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-        {%- endif -%}
-    {%- endfor -%}
+            {%- endif -%}
+        {%- endfor -%}
     </div>
 
   </div>

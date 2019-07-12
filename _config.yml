@@ -22,7 +22,25 @@ url: "https://deeuu.github.io" # the base hostname & protocol for your site, e.g
 twitter_username: jekyllrb
 github_username:  jekyll
 
-# Build settings
+author:
+    - twitter: user
+      anchor: Twitter
+    - facebook: user
+      anchor: Facebook
+    - github: user
+      anchor: GitHub
+    - gitlab: user
+      anchor: Gitlab
+    - bitbucket: user
+      anchor: BitBucket
+    - stackoverflow: user
+      anchor: Stack Overflow
+    - linkedin: user
+      anchor: LinkedIn
+    - youtube: user
+      anchor: YouTube
+    - email: user@user.me
+      anchor: Mail
 markdown: kramdown
 plugins:
   - jekyll-feed

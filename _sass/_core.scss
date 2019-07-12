@@ -32,25 +32,36 @@ div.clearfix {
   }
 }
 
-.page-nav {
-    float:right;
+.author-social-platforms {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    float: right;
+    a {
+        margin-right: 0.5em;
+    }
 }
 
-.page-nav a {
-    margin-right: 2em;
+.nav a {
+    margin-right: 1em;
 }
 
 @include respond-to('small') {
   .container {
     width: 100%;
   }
-  .page-nav {
-      float:left;
+  .author-social-platforms {
+      display: grid;
+      grid-template-columns: auto auto;
       width: 100%;
-      margin-top: 2em;
+      justify-content: center;
+      margin-top: 0em;
+      margin-bottom: 1em;
   }
-  .page-nav a {
-    margin-right: 1em;
+  .nav {
+    text-align: center;
+    a {
+        margin-right: 1em;
+    }
   }
 }
 
@@ -416,6 +427,15 @@ article.single hr {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: $base04;
+}
+
+/* Icons */
+header a .icon {
+    color: $base03;
+}
+
+header a:hover .icon {
+    color: $base0E;
 }
 
 /* Pygments template by Jan T. Sott (https://github.com/idleberg) */
