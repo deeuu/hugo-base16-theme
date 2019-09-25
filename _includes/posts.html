@@ -3,23 +3,10 @@
 <div class="article-list">
     <h1 class="headline">Posts</h1>
 
-    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
-
-    {% for post in site.posts %}
-
-      {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-      <div class="meta">
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        <span class="val">
-            <time itemprop="datePublished">
-            ( {{ post.date | date: date_format }} )
-            </time>
-        </span>
-      </div>
-
+    {% for post in site.posts %} 
+      {% include article-list-item-short.html %}
     {% endfor %}
+
     </article>
 </div>
 
